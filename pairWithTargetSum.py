@@ -1,4 +1,6 @@
 # Pair with target sum
+# Given an array of sorted numbers and a target sum, find a pair in the array whose sum is equal to the given target.
+# Write a function to return the indices of the two numbers (i.e. the pair) such that they add up to the given target.
 
 # Time Complexity#
 # The time complexity of the above algorithm will be O(N),
@@ -25,6 +27,7 @@ def pair_with_targetsum(arr, target_sum):
 
     return [-1,-1]
 
+#=============================================================================
 # alternate approach
 
 # Time Complexity#
