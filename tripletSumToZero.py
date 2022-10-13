@@ -24,12 +24,14 @@
 
 def search_triplets(arr):
     arr.sort()
-    triplets = []
+    triplets = [] # stores the valid triplets 
 
     for i in range(len(arr)):
         # skip same elements to avoid duplicate triplets
-        if i > 0 and arr[i] == arr[i-1]：
+        if i > 0 and arr[i] == arr[i-1]:
             continue
+        # find a pair whose sum is equal to -x , such that y + z = -x
+        # and x + y + z = 0
         search_pair(arr, -arr[i], i+1, triplets)
     return triplets
 
@@ -39,13 +41,13 @@ def search_pair(arr, target_sum, left, triplets):
 
         current_sum = arr[left] + arr[right]
 
-        if current_sum == target_sum： # if found the triplet
-            triplets.append([-target_sum, arr[left], arr[right])
+        if current_sum == target_sum: # if found the triplet
+            triplets.append([-target_sum, arr[left], arr[right]])
             left += 1
             right -= 1
 
             # skip the element to avoid duplicate triplets
-            while left<right and arr[left] == arr[left - 1]:
+            while left < right and arr[left] == arr[left - 1]:
                 left += 1
 
             # skip the same element to avoid duplicate triplets
@@ -53,7 +55,7 @@ def search_pair(arr, target_sum, left, triplets):
                 right -= 1
 
         # we need a pair with a larger sum
-        elif target_sum > current_sum：
+        elif target_sum > current_sum:
             left += 1
         # we need a pair with a smaller sum
         else:
