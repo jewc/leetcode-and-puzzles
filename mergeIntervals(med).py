@@ -4,6 +4,11 @@
 # Problem Statement #
 # Given a list of intervals, merge all the overlapping intervals to produce a list that has only mutually exclusive intervals.
 
+# Time complexity
+# O(N * logN), where 'N' is the total number of Intervals
+# We are iterating the intervals only once which will take O(N), in the beginning though,
+# since we need to sort the intervals, our algo will take O (N * logN)
+
 
 from __future__ import print_function
 
@@ -36,7 +41,6 @@ def merge(intervals):
         mergedIntervals.append(Interval(start, end))
         start = interval.start
         end = interval.end
-
 
   mergedIntervals.append(Interval(start, end))
   return mergedIntervals
