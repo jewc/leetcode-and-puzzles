@@ -5,6 +5,13 @@
 # Given the head of a Singly LinkedList, reverse the LinkedList.
 # Write a function to return the new head of the reversed LinkedList.
 
+# Time complexity#
+# The time complexity of our algorithm will be O(N)
+#  where ‘N’ is the total number of nodes in the LinkedList.
+#
+# Space complexity#
+# We only used constant space, therefore, the space complexity of our algorithm is O(1).
+
 from __future__ import print_function
 
 
@@ -22,9 +29,12 @@ class Node:
 
 
 def reverse(head):
+
   previous = None
   current = head
   next = None
+
+
 
   while current is not None:
       next = current.next # temporarily store the next node

@@ -24,7 +24,7 @@
 
 def search_triplets(arr):
     arr.sort()
-    triplets = [] # stores the valid triplets 
+    triplets = [] # stores the valid triplets
 
     for i in range(len(arr)):
         # skip same elements to avoid duplicate triplets
