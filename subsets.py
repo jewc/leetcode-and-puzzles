@@ -3,6 +3,8 @@
 # Problem Statement
 # Given a set with distinct elements, find all of its distinct subsets.
 #
+# Solution: Breadth First Search Approch
+# Start with an empty set. Iterate through all numbers one by one, and add them to existing sets to create new subsets
 #
 #
 # Time complexity#
